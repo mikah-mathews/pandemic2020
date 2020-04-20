@@ -10,3 +10,4 @@ import { City } from './city';
 // variable for virus timer that goes up
 // click city button --> click quarantine button --> city now displays that it is quarantined --> quarantine button is disable for x seconds
 // check which radio button(city) is pressed, then do function to that city
+
