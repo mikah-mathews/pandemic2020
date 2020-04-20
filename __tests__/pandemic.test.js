@@ -23,7 +23,8 @@ describe('', () => {
   test('virus value increases after x time duration', () => {
     let cityConstruct = new City;
     let testCities = cityConstruct.createCities();
-    
+    cityConstruct.increaseInfection(testCities);
+    expect(testCities[1]).toEqual(["Philadelphia", 3, false]);
   });
 
 //  test('new city is infected when prev. city reaches infection level 2', () => {

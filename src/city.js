@@ -51,10 +51,42 @@ export class City{
       return "Congratulation! You've discovered the cure. You win!";
     } else return ("Your current vaccine total is: " + vaccine);
   };
+
   increaseInfection(array){
-    for(i = 0; i < array.length; i++){
-      //if diseaseBlock >= 2 {increment i+1}
-      if 
+    for(let i = 0; i < array.length; i++){
+      let returnArray = [];
+      let city = array[i];
+      let keyPairs = Object.entries(city);
+      let previousCity = Object.entries()
+      // let diseaseBlockValue = Object.values(city);
+      console.log(diseaseBlockValue);
+      if(keyPairs["2" === true] || keyPairs["1" === 3]) {
+        returnArray.push(city);              
+      } else if(keyPairs["1" === 2] || keyPairs["1" === 1]) {
+        city[1] = diseaseBlockValue++;
+        returnArray.push(city);
+      } else if(keyPairs["1" === 0]) {
+        let previousCity = Object.entries(returnArray[i-1]);
+        if(previousCity["1" === 2] && previousCity ["2" === false]) {
+          city[1] = diseaseBlockValue++;
+          returnArray.push(city);
+        }
+      } else {
+        returnArray.push(city);
+      };
+      //if quarantine === true .push returnArray
+      // if diseaseBlock = 3 - no change
+      // if diseaseBlock = 2 - increase by one to make it 3
+      // if diseaseBlock = 1 - increase by one
+      // if diseaseBlock = 0 - check previous city somehow??
+
+      let infection = Object.fromEntries(
+        Object.entries(city).map(([key, value]) => [key, value + 1])
+      );
+      infection.diseaseBlock
     }
   };
 }
+
+// Something like this for returning entry
+// Object.entries(prices).map(([key, value]) => [key, value * 2]) 
