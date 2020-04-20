@@ -1,7 +1,7 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import { City } from './city';
+//import {City} from './city';
 // import $ from 'jquery';
 
 
@@ -11,3 +11,10 @@ import { City } from './city';
 // click city button --> click quarantine button --> city now displays that it is quarantined --> quarantine button is disable for x seconds
 // check which radio button(city) is pressed, then do function to that city
 
+// $(document).ready(function(){
+//   $("#start").click(function(event){
+//     event.preventDefault;
+//     $(".game-board").show();
+
+//   })
+// })

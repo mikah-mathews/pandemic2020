@@ -1,8 +1,8 @@
 export class City{
-  constructor(){
-    diseaseBlock = 0;
+  constructor(name, diseaseBlock){
+    name = this.name;
+    diseaseBlock = this.diseaseBlock;
     quarantine = false;
-
   }
   vaccineCounter (){
     let vaccine = 0;
