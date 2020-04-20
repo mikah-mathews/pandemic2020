@@ -47,21 +47,21 @@ List of cities
 Ways to fight virus
 ------
 Quarantine (able to select city to quarantine)
-> Stops city from being infected or from spreading to other cities
+> Stops city from being infected or from spreading to other cities  
 Treat Disease (able to select city to treat)
-> Removes one virus block from city
+> Removes one virus block from city  
 Vaccine (one way to end game)
-> Have to level it up to win amount
+> Have to level it up to win amount  
 
 Loss Conditions
 ------
-> Timer runs out (everyone is infected)
-> All cities are infected
-> Death toll reaches certain amount (extra feature)
+> Timer runs out (everyone is infected)  
+> All cities are infected  
+> Death toll reaches certain amount (extra feature)  
 
 Win Condition
 ------
-> Vaccine is finished
+> Vaccine is finished  
 
 How to play game
 ------
@@ -69,9 +69,9 @@ Start game button is pressed
 3 cities are infected
 Each infected city has 2 disease blocks??
 Disease blocks can be treated and then are subtracted from city disease count
-> option one - quarantine city
-> option two - treat city
-> option three - vaccine research
+> option one - quarantine city  
+> option two - treat city  
+> option three - vaccine research  
 Each button/action has a disabled time
 After click, button is disabled for varied time
 
