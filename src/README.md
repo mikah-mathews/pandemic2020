@@ -2,29 +2,47 @@
 
 #### _A 2020 simulator_
 
-#### By _**Jason Macie & Mikah Mathews**_
+#### By _**Jason Macie & Mikah Mathews - 4/20/2020**_
 
 ## Description
 
-_The year is 2020. A virus has started to sweep the globe and it is your job to stop it. Using quarantine, scientists, and _
+_The year is 2020. A virus has started to sweep the globe and it is your job to stop it. Using quarantine, vaccine scientists, and universal healthcare to treat infected people, you are able to strategize and save the planet._
 
 ## Specs
-Have Virus timer
--------
-As timer goes down, virus count goes up
-As virus count goes up, so do deaths
-Deaths are calculated as a percentage of infected number
-Fatality of virus is randomly picked at start of game by generator
+
+* There is a timer counting down
+  Input: Start Button
+  Output: Timer starts counting down
+* If infection timer finishes: the game ends in a loss.
+  Input: Timer = 00:00
+  Output: The virus has felled society. Play again?
+* New city is infected when previous city reaches 2 infection
+  Input: city1Infection = 2
+          city2Infection = 0
+  Output: city1Infection = 3
+          city2Infection = 1
+* If quarantine is used, city cannot be infected or stops infecting other cities
+  Input: Quarantine(City) Button Clicked
+  Output: City: Quarantine = True
+* If treat disease is used, infection cubes in selected city go down by one
+  Input: Treat(City) Clicked
+  Output: cityInfection = cityInfection - 1
+* If vaccine research is selected, vaccine count goes up by one
+  Input: Vaccine Research Button Clicked
+  Output: vaccineRearch = vaccineResearch + 1
+* Vaccine is completed when it reaches level 5
+  Input: vaccineResearch = 5
+  Output: You win! Play again?
 
 List of cities
-----------
-* Seattle
-* Philadelphia
-* Bangkok
-* Wuhan City
-* Rome
-* Venice
-* Paris
+------
+* Seattle (Starting infection city) (disease block: 3)
+* Philadelphia (Starting infection city) (disease block: 2)
+* Bangkok (Starting infection city) (disease block: 1)
+* Wuhan City (disease block: 0)
+* Rome (disease block: 0)
+* Venice (disease block: 0)
+* Paris (disease block: 0)
 
 Ways to fight virus
 ------
@@ -41,11 +59,9 @@ Loss Conditions
 > All cities are infected
 > Death toll reaches certain amount (extra feature)
 
-Win Conditions
+Win Condition
 ------
-> 4/7 cities are cured
 > Vaccine is finished
-
 
 How to play game
 ------
@@ -53,27 +69,20 @@ Start game button is pressed
 3 cities are infected
 Each infected city has 2 disease blocks??
 Disease blocks can be treated and then are subtracted from city disease count
-Per turn player is able to make 2 moves
-> move 1 - quarantine city
-> move 2 - treat city
+> option one - quarantine city
+> option two - treat city
+> option three - vaccine research
+Each button/action has a disabled time
+After click, button is disabled for varied time
 
-select a city (treated like a radio button [able to only select one but able to change selection before submiting])
-select action (treated like a submit button(calls function and updates data))
-
-City
-disease-block = 0-3
-*player clicks treat disease*
-disease-block = disease-block - 1
-
-## Minimum Viable Product
-* There is a timer counting down
-* Infection cubes spread to new cities
-* If quarantine is used, city cannot be infected or stops infecting other cities
-* If treat disease is used, infection cubes in selected city go down by one
-* If vaccine treatment is selected, vaccine count goes up by one
-* If vaccine is finished before loss conditions: player wins (corresponding message pops up)
-* If infection timer finishes: the game ends in a loss.
-
+## Extras
+* Randomize starting cities
+* Randomize infected cities
+* Have to test cities to find out infection rate
+* Add fatality rate
+* Randomize virus fatality
+* Add loss if fatalities reach certain number
+* Difficulty level (rate at which disease spreads or fatality level)
 
 ## Setup/Installation Requirements
 
@@ -83,7 +92,7 @@ disease-block = disease-block - 1
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_There are no known bugs_
 
 ## Technologies Used
 
@@ -95,4 +104,4 @@ _{Are there issues that have not yet been resolved that you want to let users kn
 
 This software is licensed under the MIT license.
 
-Copyright (c) 2016 **_{Jason Macie & Mikah Mathews}_**
+Copyright (c) 2020 **_{Jason Macie & Mikah Mathews}_**
