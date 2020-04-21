@@ -41,7 +41,6 @@ export class City{
       quarantine: false
     };
     let cityArray = [Object.values(seattle), Object.values(philadelphia), Object.values(bangkok), Object.values(wuhan), Object.values(rome), Object.values(venice), Object.values(paris)];
-    console.log(cityArray);
     return cityArray;
   };
   vaccineCounter () {
@@ -53,40 +52,34 @@ export class City{
   };
 
   increaseInfection(array){
+    let returnArray = [];
     for(let i = 0; i < array.length; i++){
-      let returnArray = [];
-      let city = array[i];
-      let keyPairs = Object.entries(city);
-      let previousCity = Object.entries()
-      // let diseaseBlockValue = Object.values(city);
-      console.log(diseaseBlockValue);
-      if(keyPairs["2" === true] || keyPairs["1" === 3]) {
-        returnArray.push(city);              
-      } else if(keyPairs["1" === 2] || keyPairs["1" === 1]) {
-        city[1] = diseaseBlockValue++;
-        returnArray.push(city);
-      } else if(keyPairs["1" === 0]) {
-        let previousCity = Object.entries(returnArray[i-1]);
-        if(previousCity["1" === 2] && previousCity ["2" === false]) {
-          city[1] = diseaseBlockValue++;
-          returnArray.push(city);
-        }
-      } else {
-        returnArray.push(city);
-      };
-      //if quarantine === true .push returnArray
-      // if diseaseBlock = 3 - no change
-      // if diseaseBlock = 2 - increase by one to make it 3
-      // if diseaseBlock = 1 - increase by one
-      // if diseaseBlock = 0 - check previous city somehow??
-
-      let infection = Object.fromEntries(
-        Object.entries(city).map(([key, value]) => [key, value + 1])
-      );
-      infection.diseaseBlock
+      let keyPairs = Object.entries(array[i]);
+      let infection = Object.entries(array[i]).map(([key, value]) => [key, value + 1]);
+      console.log(infection);
+      if((keyPairs[2][0] ===  '2' && keyPairs[2][1] === true) || (keyPairs[1][0] === '1' && keyPairs[1][1] === 3)) { // if ((keyPairs[2][0] === '2' && keyPairs[2][1] === true) || keyPairs[1][0] )
+        console.log( array[i] + " inside first if");
+        returnArray.push(array[i]);
+      } else if((keyPairs[1][1] === 2) || (keyPairs[1][1] ===  1)) {
+          console.log(array[i] + " Inside second if");
+          console.log(infection[1]); // set number to value
+          array[i][1] = infection[1][1]
+          returnArray.push(array[i]);
+      } else if(keyPairs[1][0] === '1' && keyPairs[1][1] === 0) {
+          let previousCity = Object.entries(array[i-1]);
+          if((previousCity[1][0] === '1' && previousCity[1][1] === 2) && (previousCity[2][0] === '2' && previousCity[2][1] === false)) {
+            array[i][1] = infection[1][1]
+            returnArray.push(array[i]);            
+          } else {
+            returnArray.push(array[i]);
+          }
+      }   
     }
+    console.log(returnArray);
+    return returnArray;
   };
 }
+
 
 // Something like this for returning entry
 // Object.entries(prices).map(([key, value]) => [key, value * 2]) 
