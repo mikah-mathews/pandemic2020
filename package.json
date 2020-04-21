@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "pandemic2020",
   "version": "1.0.0",
-  "description": "",
+  "description": "roleplay 2020",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
@@ -11,10 +11,11 @@
     "debug": "node --inspect node_modules/.bin/jest --runInBand"
   },
   "keywords": [],
-  "author": "",
+  "author": "mikah m & jay m",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "clean-webpack-plugin": "3.0.0",
     "css-loader": "^3.4.2",
